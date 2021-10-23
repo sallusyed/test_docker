@@ -16,7 +16,7 @@ jobs:
         with:
           version: latest
       - name: login to docker hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password 93ba5e05-cf60-453f-95c3-96569fd7ab97
       - name: build the image
         run: |
           docker buildx build --push \
